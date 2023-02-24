@@ -19,6 +19,9 @@ export default function PrevValueExample() {
       <Link className="link" to="/lifecycle-example">
         LifeCycleMethodsExample
       </Link>
+      <Link className="link" to="/hooks-example">
+        HooksExample
+      </Link>
     </>
   );
 }

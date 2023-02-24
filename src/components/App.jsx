@@ -13,6 +13,7 @@ const HOCExample = lazy(() => import("./HOCExample"));
 const PromiseExample = lazy(() => import("./PromiseExample"));
 const PureComponentExample = lazy(() => import("./PureComponentExample"));
 const LifecycleExample = lazy(() => import("./LifecycleExample"));
+const HooksExample = lazy(() => import("./HooksExample"));
 
 function App() {
   return (
@@ -56,6 +57,14 @@ function App() {
           element={
             <Suspense fallback="loading...">
               <LifecycleExample />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/hooks-example"
+          element={
+            <Suspense fallback="loading...">
+              <HooksExample />
             </Suspense>
           }
         />
