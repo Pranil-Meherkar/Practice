@@ -1,16 +1,18 @@
 import "../App.css";
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import Homepage from "./Homepage";
 
 // import PrevValueExample from "./PrevValueExample";
 // import HOCExample from "./HOCExample";
 // import PromiseExample from "./PromiseExample";
 // import PureComponentExample from "./PureComponentExample";
+
 import { Routes, Route } from "react-router-dom";
-const PrevValueExample = React.lazy(() => import("./PrevValueExample"));
-const HOCExample = React.lazy(() => import("./HOCExample"));
-const PromiseExample = React.lazy(() => import("./PromiseExample"));
-const PureComponentExample = React.lazy(() => import("./PureComponentExample"));
+const PrevValueExample = lazy(() => import("./PrevValueExample"));
+const HOCExample = lazy(() => import("./HOCExample"));
+const PromiseExample = lazy(() => import("./PromiseExample"));
+const PureComponentExample = lazy(() => import("./PureComponentExample"));
+const LifecycleExample = lazy(() => import("./LifecycleExample"));
 
 function App() {
   return (
@@ -46,6 +48,14 @@ function App() {
           element={
             <Suspense fallback="loading...">
               <PureComponentExample />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/lifecycle-example"
+          element={
+            <Suspense fallback="loading...">
+              <LifecycleExample />
             </Suspense>
           }
         />
