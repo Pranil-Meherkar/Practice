@@ -22,6 +22,9 @@ export default function PrevValueExample() {
       <Link className="link" to="/hooks-example">
         HooksExample
       </Link>
+      <Link className="link" to="/login-refs">
+        Login Page using Refs
+      </Link>
     </>
   );
 }
