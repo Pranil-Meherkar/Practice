@@ -1,18 +1,26 @@
 // import UseMemo from "./UseMemo";
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
+import UseCallback from "./UseCallback";
 import UseReducer from "./UseReducer";
 
 const UseMemo = lazy(() => import("./UseMemo"));
 
 function HooksExample() {
+  const [showMemo, setShowMemo] = useState(false);
   return (
     <>
       <h1>Hooks Examples</h1>
-      <Suspense fallback="loading...">
-        <UseMemo />
-      </Suspense>
+      <button onClick={() => setShowMemo(!showMemo)}>
+        {!showMemo ? "Show" : "Hide"} useMemo example
+      </button>
+      {showMemo && (
+        <Suspense fallback="loading...">
+          <UseMemo />
+        </Suspense>
+      )}
 
       <UseReducer />
+      <UseCallback />
     </>
   );
 }

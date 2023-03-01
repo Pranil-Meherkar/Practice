@@ -4,3 +4,19 @@
 .link {
   display: block;
 }
+.login {
+  margin-top: 100px;
+  text-align: center;
+  color: rgb(29, 199, 214);
+}
+.input {
+  width: 25%;
+  height: 1.5rem;
+  margin: 15px;
+}
+.login-button {
+  width: 20%;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: aqua;
+}

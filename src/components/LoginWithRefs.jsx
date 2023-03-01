@@ -23,16 +23,28 @@ function LoginWithRefs() {
           <h1>Login Form</h1>
           <div className="inputField">
             <label htmlFor="email">
-              Email
-              <input type="text" name="email" ref={emailRef} />
+              Email <br />
+              <input
+                className="input"
+                type="text"
+                name="email"
+                ref={emailRef}
+              />
             </label>
             <br />
             <label htmlFor="password">
-              Password
-              <input type="password" name="password" ref={passwordRef} />
+              Password <br />
+              <input
+                className="input"
+                type="password"
+                name="password"
+                ref={passwordRef}
+              />
             </label>
             <br />
-            <button onClick={handleClick}>LOGIN</button>
+            <button className="login-button" onClick={handleClick}>
+              LOGIN
+            </button>
           </div>
         </div>
       ) : (
