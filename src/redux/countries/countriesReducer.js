@@ -22,6 +22,7 @@ export const countriesReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         data: action.payload,
+        error: "",
       };
     case FETCH_DATA_FAILURE:
       return {

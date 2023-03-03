@@ -28,20 +28,26 @@ export const fetchDataFailure = (error) => {
 export const fetchData = () => {
   return function (dispatch) {
     dispatch(fetchDataRequest());
-    axios.get("https://restcountries.com/v3.1/all").then((countries) => {
-      const data = countries.data;
-      const requiredData = data.map((item) => {
-        return {
-          name: item.name,
-          population: item.population,
-          independentStatus: item.independent,
-          currencies: item.currencies,
-          region: item.region,
-          capital: item.capital,
-          numOfLanguages: item.languages,
-        };
+    fetch("https://restcountries.com/v3.1/all")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const requiredData = data.map((item) => {
+          return {
+            name: item.name,
+            population: item.population,
+            independentStatus: item.independent,
+            currencies: item.currencies,
+            region: item.region,
+            capital: item.capital,
+            numOfLanguages: item.languages,
+          };
+        });
+        dispatch(fetchDataSucess(requiredData));
+      })
+      .catch((error) => {
+        console.log("error === ", error);
+        dispatch(fetchDataFailure(error.message));
       });
-      dispatch(fetchDataSucess(requiredData));
-    });
   };
 };
