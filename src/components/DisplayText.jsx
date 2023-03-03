@@ -1,10 +1,7 @@
 import React from "react";
-import { PureComponent, Component } from "react";
+import { PureComponent } from "react";
 
 class DisplayText extends PureComponent {
-  constructor() {
-    super();
-  }
   render() {
     console.log("DisplayCount rendered");
     return (

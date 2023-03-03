@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 function LifecycleBHooks() {
   useEffect(() => console.log("B component did mount"), []);

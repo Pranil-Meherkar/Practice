@@ -25,6 +25,9 @@ export default function PrevValueExample() {
       <Link className="link" to="/login-refs">
         Login Page using Refs
       </Link>
+      <Link className="link" to="/countries">
+        Countries
+      </Link>
     </>
   );
 }

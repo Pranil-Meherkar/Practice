@@ -20,3 +20,31 @@
   border-radius: 5px;
   background-color: aqua;
 }
+
+.countries {
+  text-align: center;
+  background-color: #f7f5eb;
+  padding-top: 75px;
+}
+
+.countries-heading {
+  padding-bottom: 50px;
+  color: #2b3467;
+}
+
+.countries-card {
+  width: 300px;
+  margin: 10px 0;
+  padding: 15px;
+  text-align: left;
+  background-color: #bad7e9 !important;
+  color: #2b3467;
+}
+
+.countries-card:hover {
+  background-color: #2b3467 !important;
+  color: #bad7e9;
+  transform: scale(1.02);
+  box-shadow: 1px 1px 5px #2b3467;
+  transition: all ease 750ms !important;
+}
