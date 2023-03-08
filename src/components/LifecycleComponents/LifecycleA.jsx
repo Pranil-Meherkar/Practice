@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LifecycleB from "./LifecycleB";
+import LifecycleB from "./components/LifecycleB";
 
 class LifecycleA extends Component {
   constructor(props) {

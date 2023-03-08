@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Row, Col, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchData } from "../redux/countries/countriesActions";
@@ -7,7 +6,7 @@ import CardsContainer from "./CountriesComponents/CardsContainer";
 
 function Countries() {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state);
+  const data = useSelector((state) => state.countries);
 
   useEffect(() => dispatch(fetchData()), []);
   return data.loading ? (

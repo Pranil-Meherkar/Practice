@@ -15,7 +15,7 @@ const PureComponentExample = lazy(() => import("./PureComponentExample"));
 const LifecycleExample = lazy(() => import("./LifecycleExample"));
 const HooksExample = lazy(() => import("./HooksExample"));
 const LoginWithRefs = lazy(() => import("./LoginWithRefs"));
-const Countries = lazy(() => import("./Countries"));
+const Countries = lazy(() => import("../tasks/Countries"));
 
 function App() {
   return (

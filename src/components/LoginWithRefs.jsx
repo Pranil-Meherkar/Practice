@@ -16,6 +16,8 @@ function LoginWithRefs() {
 
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+
+  console.log("email ref ==> ", emailRef);
   return (
     <>
       {user.email === "" && user.password === "" ? (

@@ -1,6 +1,6 @@
 import React from "react";
-import ClickCounter from "./ClickCounter";
-import HoverCounter from "./HoverCounter";
+import ClickCounter from "./HOCComponents/ClickCounter";
+import HoverCounter from "./HOCComponents/HoverCounter";
 
 export default function HOCExample() {
   return (

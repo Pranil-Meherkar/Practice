@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DisplayText from "./DisplayText";
+import DisplayText from "./PureComponentomponents/DisplayText";
 
 function PureComponentExample() {
   const [toggle, setToggle] = useState(true);

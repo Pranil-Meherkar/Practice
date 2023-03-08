@@ -1,6 +1,6 @@
 import React from "react";
-import LifecycleA from "./LifecycleA";
-import LifecycleAHooks from "./LifecycleAHooks";
+import LifecycleA from "./LifecycleComponents/LifecycleA";
+import LifecycleAHooks from "./LifecycleComponents/LifecycleAHooks";
 
 function LifecycleExample() {
   return (

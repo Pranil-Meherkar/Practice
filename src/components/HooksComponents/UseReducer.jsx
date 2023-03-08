@@ -5,6 +5,8 @@ const initialState = {
   count5: 0,
 };
 const reducer = (state, action) => {
+  console.log("state ===" ,state)
+  console.log("action === ",action);
   switch (action.type) {
     case "increment1":
       return { ...state, count1: state.count1 + action.value };

@@ -1,9 +1,9 @@
 // import UseMemo from "./UseMemo";
 import React, { lazy, Suspense, useState } from "react";
-import UseCallback from "./UseCallback";
-import UseReducer from "./UseReducer";
+import UseCallback from "./HooksComponents/UseCallback";
+import UseReducer from "./HooksComponents/UseReducer";
 
-const UseMemo = lazy(() => import("./UseMemo"));
+const UseMemo = lazy(() => import("./HooksComponents/UseMemo"));
 
 function HooksExample() {
   const [showMemo, setShowMemo] = useState(false);

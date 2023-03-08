@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LifecycleBHooks from "./LifecycleBHooks";
+import LifecycleBHooks from "./components/LifecycleBHooks";
 
 function LifecycleAHooks() {
   const [count, setCount] = useState(0);
