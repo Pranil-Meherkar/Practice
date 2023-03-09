@@ -28,6 +28,9 @@ export default function PrevValueExample() {
       <Link className="link" to="/countries">
         Countries
       </Link>
+      <Link className="link" to="/formik-example">
+        Formik Example
+      </Link>
     </>
   );
 }

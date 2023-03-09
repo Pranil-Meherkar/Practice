@@ -16,6 +16,7 @@ const LifecycleExample = lazy(() => import("./LifecycleExample"));
 const HooksExample = lazy(() => import("./HooksExample"));
 const LoginWithRefs = lazy(() => import("./LoginWithRefs"));
 const Countries = lazy(() => import("../tasks/Countries"));
+const FormikExample = lazy(() => import("./FormikExample"));
 
 function App() {
   return (
@@ -83,6 +84,14 @@ function App() {
           element={
             <Suspense fallback="loading...">
               <Countries />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/formik-example"
+          element={
+            <Suspense fallback="loading...">
+              <FormikExample />
             </Suspense>
           }
         />

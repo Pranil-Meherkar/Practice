@@ -114,3 +114,10 @@
 .current-page {
   font-weight: bolder;
 }
+
+.my-form {
+  width: 50%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
