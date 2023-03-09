@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchData } from "../redux/countries/countriesActions";

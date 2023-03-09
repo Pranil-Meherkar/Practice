@@ -23,12 +23,11 @@
 
 .countries {
   text-align: center;
-  background-color: #f7f5eb;
-  padding-top: 75px;
+  padding-top: 25px;
 }
 
 .countries-heading {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   color: #2b3467;
 }
 
@@ -48,6 +47,13 @@
   box-shadow: 1px 1px 5px #2b3467;
   transition: all ease 750ms !important;
 }
+
+.topnav {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+}
+
 .modal-container {
   background-color: rgba(225, 225, 225, 0.9);
   position: fixed;
@@ -79,4 +85,32 @@
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
+}
+.filter-section {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+}
+
+.filter-button {
+  display: inline;
+  height: 30px;
+  /* padding: 5px; */
+  border-radius: 5px;
+}
+.filter-button:hover {
+  background-color: #ccc;
+}
+
+.filter-box {
+  padding: 20px;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.current-page {
+  font-weight: bolder;
 }

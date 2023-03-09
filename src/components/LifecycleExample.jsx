@@ -6,7 +6,7 @@ function LifecycleExample() {
   return (
     <>
       <h1>Lifecycle Methods Example</h1>
-      <LifecycleA />
+      <LifecycleA age={22} />
       {/* <LifecycleAHooks /> */}
     </>
   );

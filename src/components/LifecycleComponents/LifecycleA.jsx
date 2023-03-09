@@ -6,16 +6,22 @@ class LifecycleA extends Component {
     super(props);
     this.state = {
       name: "Pranil",
+      age: 0,
+      gender: "",
+      showText: false,
     };
     console.log("A constructor called");
   }
 
   static getDerivedStateFromProps(props, state) {
     console.log("A getDerivedStateFromProps called");
-    return null;
+    return { age: props.age };
   }
 
   componentDidMount() {
+    setTimeout(() => {
+      this.setState({ gender: "Male" });
+    }, 2000);
     console.log("A componentDidMount called");
   }
 
@@ -42,6 +48,11 @@ class LifecycleA extends Component {
       <>
         <h3>LifecycleA</h3>
         <p>Name : {this.state.name}</p>
+        <p style={{ display: this.state.showText ? "block" : "none" }}>
+          Updated Name
+        </p>
+        <p>Age: {this.state.age}</p>
+        <p>Gender: {this.state.gender}</p>
         <button onClick={this.handleClick}>Update State</button>
         <LifecycleB />
       </>

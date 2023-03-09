@@ -16,7 +16,6 @@ function CardsContainer() {
   const showModal = useSelector((state) => state.countries.modal.showModal);
   const dispatch = useDispatch();
   const [filteredData, setFilteredData] = useState([]);
-  //const [currentPageData, setCurrentPageData] = useState();
 
   const [filterCriteria, setFilterCriteria] = useState({
     name: "",
@@ -58,21 +57,60 @@ function CardsContainer() {
     <>
       {showModal && <Modal />}
       <div className="countries">
+        <h1 className="countries-heading">Countries Data</h1>
         <div className="topnav">
-          <div className="search-box">
+          <div class="input-group w-50 m-auto">
             <input
-              type="text"
-              placeholder="Search..."
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
               value={filterCriteria.name}
               onChange={(e) =>
                 setFilterCriteria({ ...filterCriteria, name: e.target.value })
               }
             />
+          </div>
+          <div className="cards-per-page">
+            <strong>Cards per Page: </strong>
+            <select
+              name="cards-per-page"
+              onChange={(e) => dispatch(setCardsPerPage(e.target.value))}
+            >
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+            </select>
+          </div>
+        </div>
+        <div className="filter-section">
+          <p className="filter-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-sliders2"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"
+              />
+            </svg>
+            Filter
+          </p>
+          <div className="filter-box">
+            Select Region:
             <select
               name="region"
               defaultValue="default-option"
               onChange={(e) =>
-                setFilterCriteria({ ...filterCriteria, region: e.target.value })
+                setFilterCriteria({
+                  ...filterCriteria,
+                  region: e.target.value,
+                })
               }
             >
               <option value="default-option" disabled hidden>
@@ -86,17 +124,8 @@ function CardsContainer() {
                 </option>
               ))}
             </select>
-            <select
-              name="cards-per-page"
-              onChange={(e) => dispatch(setCardsPerPage(e.target.value))}
-            >
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="30">30</option>
-            </select>
           </div>
         </div>
-        <h1 className="countries-heading">Countries Data</h1>
         <Container className="cards-container">
           <Row
           // style={{ justifyContent: "center" }}
