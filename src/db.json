@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "name": "Pranil",
+      "email": "pranil@nimapinfotech.com",
+      "age": "22",
+      "skills": [
+        "javascript",
+        "React"
+      ],
+      "gender": "Male",
+      "id": 1
+    }
+  ]
+}

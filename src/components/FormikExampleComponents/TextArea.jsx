@@ -4,8 +4,10 @@ import ErrorText from "./ErrorText";
 
 const TextArea = ({ name, label, ...rest }) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className="my-form">
+      <label htmlFor={name}>
+        <strong>{label}</strong>
+      </label>
       <Field as="textarea" id={name} name={name} {...rest} />
       <ErrorMessage name={name} component={ErrorText} />
     </div>

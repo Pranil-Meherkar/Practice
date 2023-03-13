@@ -4,8 +4,10 @@ import ErrorText from "./ErrorText";
 
 const Select = ({ name, label, options, ...rest }) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className="my-form">
+      <label htmlFor={name}>
+        <strong>{label}</strong>
+      </label>
       <Field as="select" id={name} name={name} {...rest}>
         {options.map((option) => {
           return (

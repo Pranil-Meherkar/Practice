@@ -97,7 +97,7 @@
 .filter-button {
   display: inline;
   height: 30px;
-  /* padding: 5px; */
+  padding: 5px;
   border-radius: 5px;
 }
 .filter-button:hover {
@@ -116,7 +116,6 @@
 }
 
 .my-form {
-  width: 50%;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -124,4 +123,30 @@
 
 .form-fields-error {
   color: red;
+}
+
+.crud-form-page {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.crud-form {
+  margin: auto;
+  background-color: #ccc;
+  width: 33%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.input-fields {
+  padding: 20px 0;
+}
+
+.data-table {
+  margin: auto;
+  width: 80%;
 }

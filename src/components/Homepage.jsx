@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export default function PrevValueExample() {
   return (
     <>
+      <h2>Practice</h2>
       <Link className="link" to="/prev-value-example">
         PrevValueExample
       </Link>
@@ -25,11 +26,13 @@ export default function PrevValueExample() {
       <Link className="link" to="/login-refs">
         Login Page using Refs
       </Link>
-      <Link className="link" to="/countries">
-        Countries
-      </Link>
       <Link className="link" to="/formik-example">
         Formik Example
+      </Link>
+
+      <h2>Tasks</h2>
+      <Link className="link" to="/countries">
+        Countries
       </Link>
     </>
   );

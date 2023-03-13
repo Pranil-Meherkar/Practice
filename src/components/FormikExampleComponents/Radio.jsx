@@ -5,7 +5,10 @@ import ErrorText from "./ErrorText";
 const Radio = ({ name, label, options, ...rest }) => {
   return (
     <div>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name}>
+        <strong>{label}</strong>
+      </label>
+      <br />
       <Field id={name} name={name} {...rest}>
         {(fieldProps) => {
           return options.map((option) => {

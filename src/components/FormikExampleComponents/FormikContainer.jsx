@@ -23,7 +23,7 @@ const validationSchema = Yup.object({
   description: Yup.string().required("Description required"),
   selectOptions: Yup.string().required("Select an option"),
   radioOptions: Yup.string().required("Select an option"),
-  checkboxOptions: Yup.array().required("Select an option"),
+  checkboxOptions: Yup.array().min(1, "Select an option"),
 });
 
 const onSubmit = (values) => {
@@ -46,7 +46,7 @@ const FormikContainer = () => {
         return (
           <Form>
             <h3>My Form</h3>
-            <FormikControl control="email" name="email" label="Email" />
+            <FormikControl control="input" name="email" label="Email" />
             <FormikControl
               control="textarea"
               name="description"
