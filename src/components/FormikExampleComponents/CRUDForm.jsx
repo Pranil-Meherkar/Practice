@@ -30,6 +30,7 @@ const validationSchema = Yup.object({
 
 const CRUDForm = () => {
   const [dataList, setDataList] = useState([]);
+  const [editValues, setEditValues] = useState(null);
 
   const getDataList = () => {
     axios
@@ -37,11 +38,22 @@ const CRUDForm = () => {
       .then((res) => setDataList(res.data))
       .catch((err) => console.log(err.message));
   };
-  const onSubmit = async (values) => {
+  const onSubmit = async (values, { resetForm }) => {
     console.log("values =>", values);
-    axios.post("http://localhost:3004/data", values).then(() => {
-      getDataList();
-    });
+
+    editValues
+      ? axios
+          .put(`http://localhost:3004/data/${editValues.id}`, values)
+          .then(() => {
+            getDataList();
+            resetForm();
+          })
+      : axios.post("http://localhost:3004/data", values).then(() => {
+          getDataList();
+          resetForm();
+        });
+
+    editValues && setEditValues(null);
   };
 
   useEffect(() => {
@@ -52,9 +64,10 @@ const CRUDForm = () => {
       <div className="crud-form">
         <h2>CRUD Form</h2>
         <Formik
-          initialValues={initialValues}
+          initialValues={editValues || initialValues}
           validationSchema={validationSchema}
           onSubmit={onSubmit}
+          enableReinitialize
         >
           {(formik) => {
             return (
@@ -95,7 +108,7 @@ const CRUDForm = () => {
                   />
                 </div>
                 <button type="submit" disabled={!formik.isValid}>
-                  Submit
+                  {editValues ? "Update" : "Submit"}
                 </button>
                 <button type="reset">Reset</button>
               </Form>
@@ -120,8 +133,8 @@ const CRUDForm = () => {
           <tbody>
             {dataList.map((item, index) => {
               return (
-                <tr key={index}>
-                  <th scope="row">{index}</th>
+                <tr key={item.id}>
+                  <th scope="row">{index + 1}</th>
                   <td>{item.name}</td>
                   <td>{item.email}</td>
                   <td>{item.age}</td>
@@ -129,12 +142,25 @@ const CRUDForm = () => {
                     {item.skills.reduce((acc, skill) => acc + ", " + skill)}
                   </td>
                   <td>
-                    <button type="button" className="btn btn-primary">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setEditValues(item);
+                      }}
+                      className="btn btn-primary"
+                    >
                       Edit
                     </button>
                   </td>
                   <td>
-                    <button type="button" className="btn btn-danger">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        axios.delete(`http://localhost:3004/data/${item.id}`);
+                        getDataList();
+                      }}
+                      className="btn btn-danger"
+                    >
                       Delete
                     </button>
                   </td>

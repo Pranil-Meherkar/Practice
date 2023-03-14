@@ -71,6 +71,7 @@ const FormikContainer = () => {
               options={optionsList.slice(1)}
             />
             <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
           </Form>
         );
       }}

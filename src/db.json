@@ -3,13 +3,25 @@
     {
       "name": "Pranil",
       "email": "pranil@nimapinfotech.com",
+      "age": "278",
+      "skills": [
+        "javascript",
+        "React",
+        "problem-solving"
+      ],
+      "gender": "Male",
+      "id": 1
+    },
+    {
+      "name": "Aditya",
+      "email": "aditya@nimapinfotech.com",
       "age": "22",
       "skills": [
         "javascript",
         "React"
       ],
       "gender": "Male",
-      "id": 1
+      "id": 3
     }
   ]
 }
