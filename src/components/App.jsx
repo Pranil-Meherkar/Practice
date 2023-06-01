@@ -17,6 +17,7 @@ const HooksExample = lazy(() => import("./HooksExample"));
 const LoginWithRefs = lazy(() => import("./LoginWithRefs"));
 const Countries = lazy(() => import("../tasks/Countries"));
 const FormikExample = lazy(() => import("./FormikExample"));
+const ChartJsExample = lazy(() => import("./ChartJsExample"));
 
 function App() {
   return (
@@ -92,6 +93,14 @@ function App() {
           element={
             <Suspense fallback="loading...">
               <FormikExample />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/chartjs-example"
+          element={
+            <Suspense fallback="loading...">
+              <ChartJsExample />
             </Suspense>
           }
         />

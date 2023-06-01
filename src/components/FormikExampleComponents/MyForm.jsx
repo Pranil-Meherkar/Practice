@@ -22,7 +22,8 @@ const validateDegree = (values) => {
 };
 
 const onSubmit = (values, onSubmitProps) => {
-  console.log("values =>", values);
+  // console.log("values =>", values);
+  console.log("phonenumber=> ", values.phoneNumbers);
   onSubmitProps.setSubmitting(false);
   onSubmitProps.resetForm();
 };
@@ -35,7 +36,8 @@ const validationSchema = Yup.object({
 
 function MyForm() {
   return (
-    <div>
+    <div style={{width: "60%", display:"flex",flexDirection:"column", margin:"auto"}}>
+      <h2>My Form</h2>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -61,12 +63,25 @@ function MyForm() {
               <Field type="email" id="email" name="email" />
               <ErrorMessage name="email" component={ErrorText} />
               <label htmlFor="degree">Degree</label>
-              <Field
-                type="text"
-                id="degree"
-                name="degree"
-                validate={validateDegree}
-              />
+              <div style={{display: "flex", justifyContent: "space-around"}} >
+                <Field
+                  type="text"
+                  id="degree"
+                  name="degree"
+                  validate={validateDegree}
+                  style={{width: "70%"}}
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setFieldTouched("degree");
+                    validateField("degree");
+                  }}
+                  style={{width: "20%"}}
+                >
+                  validate Degree
+                </button>
+              </div>
               <ErrorMessage name="degree" component={ErrorText} />
               <label htmlFor="skills">Skills</label>
               <Field as="textarea" id="skills" name="skills" />
@@ -96,7 +111,7 @@ function MyForm() {
                                 -
                               </button>
                             )}
-                            {!index && (
+                            {index === phoneNumbers.length - 1 && (
                               <button type="button" onClick={() => push("")}>
                                 +
                               </button>
@@ -109,32 +124,26 @@ function MyForm() {
                 }}
               </FieldArray>
               <ErrorMessage name="social.phoneNumbers" />
-              <button
-                type="button"
-                onClick={() => {
-                  setTouched({
-                    name: true,
-                    email: true,
-                    degree: true,
-                  });
-                  validateForm();
-                }}
-              >
-                validate All
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setFieldTouched("degree");
-                  validateField("degree");
-                }}
-              >
-                validate Degree
-              </button>
-              <button type="reset">Reset</button>
-              <button type="submit" disabled={!isValid || isSubmitting}>
-                Submit
-              </button>
+              <div style={{display:"flex" ,justifyContent:"space-around"}}>
+                <button type="submit" disabled={!isValid}>
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTouched({
+                      name: true,
+                      email: true,
+                      degree: true,
+                    });
+                    validateForm();
+                  }}
+                >
+                  validate All
+                </button>
+                
+                <button type="reset">Reset</button>
+              </div>
             </Form>
           );
         }}

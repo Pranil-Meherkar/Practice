@@ -4,7 +4,7 @@ import ErrorText from "./ErrorText";
 
 const Radio = ({ name, label, options, ...rest }) => {
   return (
-    <div>
+    <div >
       <label htmlFor={name}>
         <strong>{label}</strong>
       </label>

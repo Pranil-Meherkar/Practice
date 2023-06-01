@@ -1,27 +1,27 @@
 {
   "data": [
     {
-      "name": "Pranil",
-      "email": "pranil@nimapinfotech.com",
-      "age": "278",
-      "skills": [
-        "javascript",
-        "React",
-        "problem-solving"
-      ],
-      "gender": "Male",
-      "id": 1
-    },
-    {
-      "name": "Aditya",
-      "email": "aditya@nimapinfotech.com",
-      "age": "22",
+      "name": "Pranil Meherkar",
+      "email": "pranil@nimapinfotec",
+      "age": "42",
       "skills": [
         "javascript",
         "React"
       ],
       "gender": "Male",
-      "id": 3
+      "id": 1
+    },
+    {
+      "name": "Neha Gawde",
+      "email": "nehag@nimapinfotech.com",
+      "age": "20",
+      "skills": [
+        "problem-solving",
+        "javascript",
+        "React"
+      ],
+      "gender": "Female",
+      "id": 2
     }
   ]
 }

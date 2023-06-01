@@ -64,16 +64,13 @@
 
 .custom-modal {
   width: 50%;
-  /* font-size: small; */
-  overflow-y: scroll;
-  max-height: 100vh;
+  height: 80vh;
   text-align: center;
-  padding-top: 20px;
-  background-color: #155881;
-  /* position: fixed; */
+  padding-top: 10vh;
+  background-color:white;
   z-index: 1;
   transform: translate(50%, 20px);
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .modal-data {
@@ -117,6 +114,7 @@
 
 .my-form {
   gap: 10px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
 }
@@ -125,28 +123,46 @@
   color: red;
 }
 
-.crud-form-page {
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
-.crud-form {
-  margin: auto;
-  background-color: #ccc;
-  width: 40%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-}
-
 .input-fields {
   padding: 20px 0;
 }
+/* .crud-form-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+} */
 
-.data-table {
+/* .crud-form {
+  margin: auto;
+  background-color: white;
+  width: 90%;
+  height: 60vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow-y: scroll;
+} */
+/* .crud-form::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+
+.crud-form::-webkit-scrollbar-track {
+  border-radius: 25px;
+  box-shadow: inset 0 0 6px rgba(104, 140, 240, 0.3);
+}
+
+.crud-form::-webkit-scrollbar-thumb {
+  background-color: lightblue;
+  border-radius: 25px;
+  outline: 1px solid lightblue;
+} */
+
+
+/* .data-table {
+  padding: 50px 0;
   margin: auto;
   width: 80%;
-}
+} */

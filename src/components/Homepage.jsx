@@ -29,6 +29,9 @@ export default function PrevValueExample() {
       <Link className="link" to="/formik-example">
         Formik Example
       </Link>
+      <Link className="link" to="/chartjs-example">
+        ChartJs Example
+      </Link>
 
       <h2>Tasks</h2>
       <Link className="link" to="/countries">
