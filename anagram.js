@@ -15,4 +15,4 @@ function anagram(str1, str2) {
   return arrayEqual(strArr1, strArr2);
 }
 
-console.log(anagram());
+console.log(anagram("spine", "pines"));
