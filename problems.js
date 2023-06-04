@@ -77,6 +77,73 @@
 
 // fibonacciSeries(10)
 
-/////////////////////////////// 8
+/////////////////////////////// 9
 
 //same as 1
+
+
+/////////////////////////////// 10
+
+// const list = [1,2,12,11,121,44,5,47,74,48,98,6,78]
+
+// console.log(list.filter(item => !(item % 2)))
+
+/////////////////////////////// 11
+
+// function isPrime(num) {
+//     for(let j = 2; j <= Math.floor(num/2);j++){
+//         if (num % j === 0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// function showPrime(limit){
+    
+//     for(let i = 2;i<= limit;i++){
+//         isPrime(i) && console.log(i);
+//     }
+// }
+// console.log(isPrime(4));
+// showPrime(20);
+
+/////////////////////////////// 12
+
+// const squareRoot = (num) => {
+//     for(let i = 1; i <= num/2; i++){
+//         if(i*i === num){
+//             return i
+//         }
+//     }
+//     return "Enter perfect square numbers only, for non perfect square numbers use 'Math.sqrt()' instead"
+// }
+// console.log(squareRoot(143))
+
+/////////////////////////////// 13
+
+// const arr = [1, 3, 4, 4, 7, 3, 8]
+
+// console.log("Duplicate items:")
+// const newArr = []
+// arr.forEach(item => {
+//     if (!newArr.includes(item)) newArr.push(item)
+//     else console.log(item)
+// })
+
+// console.log(`Unique array: ${newArr}`)
+
+/////////////////////////////// 14
+
+const arr = [80, 60, 10, 50, 30, 100, 0, 50]
+
+const pairs = []
+arr.forEach((item, index) => {
+    if(index === arr.length - 1) return
+    const temp = arr.slice(index+1).filter(i => i === 100 - item)
+    if(temp.length){
+        pairs.push(...temp.map(i => [item, i]))
+    }
+})
+
+console.log(pairs)
