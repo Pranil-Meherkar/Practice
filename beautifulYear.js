@@ -1,4 +1,7 @@
-const year = 1498;
+// find the next year after the input that has all digits unique
+// For Eg: the next year with unique digits after 1987 is 2013
+
+const year = 1987;
 
 function isUnique(num) {
   let numArray = num.toString().split("");
