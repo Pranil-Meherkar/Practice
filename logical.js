@@ -64,13 +64,26 @@
 
 /////////////////////////////////////////////////////
 
-let str = "maharashtra"
-str = str.split("") // expected op: "{ m: 1, a: 4, h: 2, r: 2, s: 1, t: 1 }"
+// let str = "maharashtra"
+// str = str.split("") // expected op: "{ m: 1, a: 4, h: 2, r: 2, s: 1, t: 1 }"
 
-const temp = [... new Set(str)]
-const op = temp.reduce((acc, i) => {
-    acc[i] = str.filter(letter => letter === i).length
-    return acc
-}, {})
+// const temp = [... new Set(str)]
+// const op = temp.reduce((acc, i) => {
+//     acc[i] = str.filter(letter => letter === i).length
+//     return acc
+// }, {})
 
-console.log(op)
+// console.log(op)
+
+////////////////////////////////////////////////////
+
+// Reverse without using new variable or any functions
+
+const arr = [1,2,3,4,5,"vikas"]
+const l = arr.length
+
+for(let i = 0; i < l / 2; i++){
+    [arr[i], arr[l - i - 1]] = [arr[l - i - 1], arr[i]]
+}
+
+console.log(arr)
