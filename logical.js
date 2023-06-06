@@ -54,10 +54,23 @@
 
 /////////////////////////////////////////////////////
 
-// rotation of letters
+// // rotation of letters
 
-let input = "pranil"
-let n = 3  // expected op: "ilpran"
+// let input = "pranil"
+// let n = 3  // expected op: "ilpran"
 
-n = input.length - n % input.length 
-console.log(input.slice(n) + input.slice(0,n))
+// n = input.length - n % input.length 
+// console.log(input.slice(n) + input.slice(0,n))
+
+/////////////////////////////////////////////////////
+
+let str = "maharashtra"
+str = str.split("") // expected op: "{ m: 1, a: 4, h: 2, r: 2, s: 1, t: 1 }"
+
+const temp = [... new Set(str)]
+const op = temp.reduce((acc, i) => {
+    acc[i] = str.filter(letter => letter === i).length
+    return acc
+}, {})
+
+console.log(op)
