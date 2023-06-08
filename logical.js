@@ -77,13 +77,26 @@
 
 ////////////////////////////////////////////////////
 
-// Reverse without using new variable or any functions
+// // Reverse without using new variable or any functions
 
-const arr = [1,2,3,4,5,"vikas"]
-const l = arr.length
+// const arr = [1,2,3,4,5,"vikas"]
+// const l = arr.length
 
-for(let i = 0; i < l / 2; i++){
-    [arr[i], arr[l - i - 1]] = [arr[l - i - 1], arr[i]]
-}
+// for(let i = 0; i < l / 2; i++){
+//     [arr[i], arr[l - i - 1]] = [arr[l - i - 1], arr[i]]
+// }
 
-console.log(arr)
+// console.log(arr)
+
+///////////////////////////////////////////////////
+
+// Find if an array contains all elements present in second array
+
+const arr = [1,2,4,5,6,7,8]
+const small1 = [1,4,6,7]
+const small2 = [4,6,9]
+
+const isPresent = (first, second) => arr.length === [...new Set([...first, ...second])].length
+
+console.log(isPresent(arr, small1))
+console.log(isPresent(arr, small2))
