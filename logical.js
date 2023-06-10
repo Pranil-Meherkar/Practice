@@ -64,11 +64,10 @@
 
 /////////////////////////////////////////////////////
 
-// let str = "maharashtra"
-// str = str.split("") // expected op: "{ m: 1, a: 4, h: 2, r: 2, s: 1, t: 1 }"
+// let str = "maharashtra" // expected op: "{ m: 1, a: 4, h: 2, r: 2, s: 1, t: 1 }"
 
-// const temp = [... new Set(str)]
-// const op = temp.reduce((acc, i) => {
+// str = str.split("") 
+// const op = [... new Set(str)].reduce((acc, i) => {
 //     acc[i] = str.filter(letter => letter === i).length
 //     return acc
 // }, {})
@@ -90,13 +89,15 @@
 
 ///////////////////////////////////////////////////
 
-// Find if an array contains all elements present in second array
+// // Find if an array contains all elements present in second array
 
-const arr = [1,2,4,5,6,7,8]
-const small1 = [1,4,6,7]
-const small2 = [4,6,9]
+// const arr = [1,2,4,5,6,7,8]
+// const small1 = [1,4,6,7]
+// const small2 = [4,6,9]
 
-const isPresent = (first, second) => arr.length === [...new Set([...first, ...second])].length
+// const isPresent = (first, second) => arr.length === [...new Set([...first, ...second])].length
 
-console.log(isPresent(arr, small1))
-console.log(isPresent(arr, small2))
+// console.log(isPresent(arr, small1))
+// console.log(isPresent(arr, small2))
+
+//////////////////////////////////////////////////

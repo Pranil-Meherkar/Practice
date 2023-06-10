@@ -135,15 +135,40 @@
 
 /////////////////////////////// 14
 
-const arr = [80, 60, 10, 50, 30, 100, 0, 50]
+// const arr = [80, 60, 10, 50, 30, 100, 0, 50]
 
-const pairs = []
-arr.forEach((item, index) => {
-    if(index === arr.length - 1) return
-    const temp = arr.slice(index+1).filter(i => i === 100 - item)
-    if(temp.length){
-        pairs.push(...temp.map(i => [item, i]))
-    }
-})
+// const pairs = []
+// arr.forEach((item, index) => {
+//     if(index === arr.length - 1) return
+//     const temp = arr.slice(index+1).filter(i => i === 100 - item)
+//     if(temp.length){
+//         pairs.push(...temp.map(i => [item, i]))
+//     }
+// })
 
-console.log(pairs)
+// console.log(pairs)
+
+/////////////////////////////// 16
+
+const strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+let op = strs.reduce((acc, i) => {
+    const temp = i.split("").sort().join("")
+    if(acc[temp]) acc[temp].push(i)
+    else acc[temp] = [i]
+    return acc
+}, {})
+
+console.log(Object.values(op))
+
+/////////////////////////////// 17
+
+// let str = "maharashtra" // expected op: "{ m: 1, a: 4, h: 2, r: 2, s: 1, t: 1 }"
+
+// str = str.split("") 
+// const op = [... new Set(str)].reduce((acc, i) => {
+//     acc[i] = str.filter(letter => letter === i).length
+//     return acc
+// }, {})
+
+// console.log(op)
