@@ -16,15 +16,15 @@
 
 /////////////////////////////// 2
 
-// let integerNum = 1234
+let integerNum = 12.34
 
-// let op = 0
-// while(integerNum > 0){
-//     op = op * 10 + integerNum % 10
-//     integerNum = Math.floor(integerNum/10)
-// }
+let op = 0
+while(integerNum > 0){
+    op = op * 10 + integerNum % 10
+    integerNum = Math.floor(integerNum/10)
+}
 
-// console.log(op)
+console.log(op)
 
 /////////////////////////////// 3
 
@@ -150,16 +150,16 @@
 
 /////////////////////////////// 16
 
-const strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
+// const strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
-let op = strs.reduce((acc, i) => {
-    const temp = i.split("").sort().join("")
-    if(acc[temp]) acc[temp].push(i)
-    else acc[temp] = [i]
-    return acc
-}, {})
+// let op = strs.reduce((acc, i) => {
+//     const temp = i.split("").sort().join("")
+//     if(acc[temp]) acc[temp].push(i)
+//     else acc[temp] = [i]
+//     return acc
+// }, {})
 
-console.log(Object.values(op))
+// console.log(Object.values(op))
 
 /////////////////////////////// 17
 
