@@ -31,16 +31,54 @@
 //    ***
 //     *
 
-const n = 5;
-let str = "";
-for (let i = 0; i < n * 2 - 1; i++) {
-  for (let j = 0; j < (i >= n ? i - n + 1 : n - i - 1); j++) {
+// const n = 5;
+// let str = "";
+// for (let i = 0; i < n * 2 - 1; i++) {
+//   for (let j = 0; j < (i >= n ? i - n + 1 : n - i - 1); j++) {
+//     str += " ";
+//   }
+//   for (let k = 0; k <= (i >= n ? (2 * n - i - 2) * 2 : i * 2); k++) {
+//     str += "*";
+//   }
+//   str += "\n";
+// }
+
+// console.log(str);
+
+//////////////////////////////////////////////////////////////////////
+
+//     *
+//    ***
+//   * * *
+//  *  *  *
+// *********
+//  *  *  *
+//   * * *
+//    ***
+//     *
+
+let str = ""
+const n = 5
+for(let i = 0; i < (2 * n); i++){
+  
+  if(i === n){
+    for(let j = 0; j < (2 * n) - 1; j++)
+      str += "*"
+    str += "\n"
+    continue
+  } 
+  
+  for(let j = 0; j < (i < n ? n - i : i - n); j++){
     str += " ";
   }
-  for (let k = 0; k <= (i >= n ? (2 * n - i - 2) * 2 : i * 2); k++) {
-    str += "*";
+  for(let k = 0; k < (i < n ?((2 * i) - 1) : (2 * (2 * n - i) - 1)); k++){
+    if(k === 0 
+    || k === (i < n ? ((2 * i) - 2) : ((2 * (2 * n - i) - 2))) 
+    || k === (i < n ? i - 1 : 2 * n -i -1 ))
+      str += "*"
+    else str += " "
   }
-  str += "\n";
+  str += "\n"
 }
 
-console.log(str);
+console.log(str)
