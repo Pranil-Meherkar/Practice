@@ -32,6 +32,9 @@ export default function PrevValueExample() {
       <Link className="link" to="/chartjs-example">
         ChartJs Example
       </Link>
+      <Link className="link" to="/react-hook-form-example">
+        React Hook Form Example
+      </Link>
 
       <h2>Tasks</h2>
       <Link className="link" to="/countries">

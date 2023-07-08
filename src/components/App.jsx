@@ -8,6 +8,7 @@ import Homepage from "./Homepage";
 // import PureComponentExample from "./PureComponentExample";
 
 import { Routes, Route } from "react-router-dom";
+import Piano from "./Piano";
 const PrevValueExample = lazy(() => import("./PrevValueExample"));
 const HOCExample = lazy(() => import("./HOCExample"));
 const PromiseExample = lazy(() => import("./PromiseExample"));
@@ -18,6 +19,7 @@ const LoginWithRefs = lazy(() => import("./LoginWithRefs"));
 const Countries = lazy(() => import("../tasks/Countries"));
 const FormikExample = lazy(() => import("./FormikExample"));
 const ChartJsExample = lazy(() => import("./ChartJsExample"));
+const ReactHookFormExample = lazy(() => import("./ReactHookFormExample"));
 
 function App() {
   return (
@@ -101,6 +103,22 @@ function App() {
           element={
             <Suspense fallback="loading...">
               <ChartJsExample />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/react-hook-form-example"
+          element={
+            <Suspense fallback="loading...">
+              <ReactHookFormExample />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/piano"
+          element={
+            <Suspense fallback="loading...">
+              <Piano />
             </Suspense>
           }
         />
