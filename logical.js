@@ -101,3 +101,18 @@
 // console.log(isPresent(arr, small2))
 
 //////////////////////////////////////////////////
+// Nth root of a number
+
+const findNthRoot = (num, n=1) => {
+  let i = 1;
+  while(i**n <= num){
+    if(i**n === num){
+      return i
+    }
+    i++
+  }
+  return i**n - num > num - (i-1)**n ? i-1 : i
+}
+
+console.log(findNthRoot(50,3))
+//////////////////////////////////////////////////
