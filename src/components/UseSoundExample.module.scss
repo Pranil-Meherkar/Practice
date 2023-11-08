@@ -1,0 +1,22 @@
+.progressContainer {
+    width: 500px;
+    height: 10px;
+    border: 1px solid #aaa;
+    margin: 30px 0;
+    border-radius: 5px;
+
+    .progressBar {
+        border-radius: 5px;
+        height: 10px;
+        width: 0%;
+        
+        &.isPlaying {
+            background-color: rgb(125, 249, 249);
+        }
+    }
+
+    .timeStampContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -9,6 +9,7 @@ import Homepage from "./Homepage";
 
 import { Routes, Route } from "react-router-dom";
 import Piano from "./Piano";
+import UseSoundExample from "./UseSoundExample";
 const PrevValueExample = lazy(() => import("./PrevValueExample"));
 const HOCExample = lazy(() => import("./HOCExample"));
 const PromiseExample = lazy(() => import("./PromiseExample"));
@@ -119,6 +120,14 @@ function App() {
           element={
             <Suspense fallback="loading...">
               <Piano />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/use-sound-example"
+          element={
+            <Suspense fallback="loading...">
+              <UseSoundExample />
             </Suspense>
           }
         />
